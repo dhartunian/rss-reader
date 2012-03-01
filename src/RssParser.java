@@ -23,8 +23,8 @@ public class RssParser {
 		
 		RssParser myrss = new RssParser();
 		myrss.readRss("rss.xml");
-		//myrss.doc.printPosts();
-		System.out.println(myrss.doc.supportsDC());
+		myrss.doc.printPosts();
+//		System.out.println(myrss.doc.supportsDC());
 	}
 	
 	public void readRss(String filename) {

@@ -17,5 +17,4 @@ public class RssItem {
 		rep = rep + "Title:" + this.title + " date:" + this.date + "\n" + this.link;
 		return rep;
 	}
-
 }
