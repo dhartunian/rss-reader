@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/">
+  <channel rdf:about="http://pinboard.in">
+    <title>Pinboard (dhartunian)</title>
+    <link>http://pinboard.in/u:dhartunian/</link>
+    <description>recent bookmarks from dhartunian</description>
+    <items>
+      <rdf:Seq>	<rdf:li rdf:resource="http://www.ftrain.com/google_takes_all.html"/>
+	<rdf:li rdf:resource="http://wellformedweb.org/story/1"/>
+	<rdf:li rdf:resource="http://web.resource.org/rss/1.0/modules/"/>
+	<rdf:li rdf:resource="http://www.smallbytes.net/~bobkat/waterstone.html"/>
+	<rdf:li rdf:resource="http://www.princexml.com/"/>
+	<rdf:li rdf:resource="http://infovore.org/archives/2012/02/26/a-year-of-links/"/>
+	<rdf:li rdf:resource="http://www.minecraftwiki.net/wiki/Minecraft_Wiki"/>
+	<rdf:li rdf:resource="http://www.wordbrooklyn.com/book/9780802129925"/>
+	<rdf:li rdf:resource="http://www.amazon.com/Tinker-Tailor-Soldier-Spy-George/dp/0143119788/ref=tmm_pap_title_1?ie=UTF8&amp;qid=1330404820&amp;sr=1-1"/>
+	<rdf:li rdf:resource="http://playfic.com/"/>
+	<rdf:li rdf:resource="http://www.sharpedgebeer.com/"/>
+	<rdf:li rdf:resource="http://fallingwater.org/"/>
+	<rdf:li rdf:resource="http://www.lvpgh.com/lawrenceville-restaurants"/>
+	<rdf:li rdf:resource="http://www.mattress.org/"/>
+	<rdf:li rdf:resource="http://www.warhol.org/"/>
+	<rdf:li rdf:resource="http://www.pittsburghparks.org/"/>
+	<rdf:li rdf:resource="http://www.tour.pitt.edu/tour-080.html"/>
+	<rdf:li rdf:resource="http://www.square-cafe.com/"/>
+	<rdf:li rdf:resource="http://www.airbnb.com/rooms/8468#photos"/>
+	<rdf:li rdf:resource="http://www.fastcocreate.com/1679472/martin-scorseses-film-school-the-85-films-you-need-to-see-to-know-anything-about-film"/>
+	<rdf:li rdf:resource="http://lesswrong.com/lw/9wr/my_algorithm_for_beating_procrastination/"/>
+	<rdf:li rdf:resource="http://www.chris-granger.com/2012/02/26/connecting-to-your-creation/"/>
+	<rdf:li rdf:resource="http://www.aboutlinux.info/2005/10/10-seconds-guide-to-bash-shell.html"/>
+	<rdf:li rdf:resource="http://vimeo.com/36579366"/>
+	<rdf:li rdf:resource="https://sites.google.com/site/asenselessconversation/"/>
+	<rdf:li rdf:resource="http://tylerc.com/the-120-minutes-archive/1992/"/>
+	<rdf:li rdf:resource="http://www.cookinglight.com/cooking-101/techniques/cooking-questions-tips-00400000064986/print-index.html"/>
+	<rdf:li rdf:resource="http://practicalthought.com/sl/"/>
+	<rdf:li rdf:resource="http://drdobbs.com/184401197"/>
+	<rdf:li rdf:resource="http://www.gnuplotting.org/"/>
+	<rdf:li rdf:resource="https://pinboard.in/directory"/>
+	<rdf:li rdf:resource="http://www.metafilter.com/112106/The-7-Biggest-Economic-Lies"/>
+	<rdf:li rdf:resource="http://notes.pinboard.in/u:dhartunian/941722a563023e1d0b62"/>
+	<rdf:li rdf:resource="http://gogameguru.com/zhou-hexi-challenge-chen-yaoye-26th-tianyuan/"/>
+	<rdf:li rdf:resource="http://vimeo.com/user10165343/review/35759983/820bd84fa4"/>
+	<rdf:li rdf:resource="http://www.masteringemacs.org/articles/2010/12/13/complete-guide-mastering-eshell/"/>
+	<rdf:li rdf:resource="http://www.clojure.net/2012/02/22/DSL-Examples/"/>
+	<rdf:li rdf:resource="http://www.addedbytes.com/blog/if-php-were-british/"/>
+	<rdf:li rdf:resource="http://www.youtube.com/watch?feature=player_embedded&amp;v=MNdT5FSgEP0"/>
+	<rdf:li rdf:resource="http://www.youtube.com/watch?feature=player_embedded&amp;v=fLG0kkgnRkc"/>
+	<rdf:li rdf:resource="http://coevolving.com/blogs/index.php/archive/digital-photos-capturing-archiving-printing-web-sharing-photoblogging/"/>
+	<rdf:li rdf:resource="http://qdig.sourceforge.net/Main/HomePage"/>
+	<rdf:li rdf:resource="http://www.zenphoto.org/"/>
+	<rdf:li rdf:resource="http://code.google.com/p/google-breakpad/"/>
+	<rdf:li rdf:resource="http://mindprod.com/jgloss/jgloss.html"/>
+	<rdf:li rdf:resource="http://arstechnica.com/tech-policy/news/2010/11/what-google-knows-about-you-and-how-to-tweak-it.ars"/>
+	<rdf:li rdf:resource="http://soundcloud.com/kompakt/sets/michael-mayer-total-12-megaset/"/>
+	<rdf:li rdf:resource="http://samsaffron.com/archive/2012/02/17/stop-paying-your-jquery-tax"/>
+	<rdf:li rdf:resource="http://spin.atomicobject.com/2012/02/14/how-to-write-good-requirments/"/>
+	<rdf:li rdf:resource="http://www.datastax.com/dev"/>
+      </rdf:Seq>
+    </items>
+  </channel><item rdf:about="http://www.ftrain.com/google_takes_all.html">
+    <title>August 2009: How Google beat Amazon and Ebay to the Semantic Web (Ftrain.com)</title>
+    <dc:date>2012-02-29T21:49:46+00:00</dc:date>
+    <link>http://www.ftrain.com/google_takes_all.html</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>semantic-web google speculative-fiction wrong-predictions</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:5abe85500d70/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:semantic-web"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:google"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:speculative-fiction"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:wrong-predictions"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://wellformedweb.org/story/1">
+    <title>The Well-Formed Web | 2002-11-24 | The Well-Formed Web</title>
+    <dc:date>2012-02-29T21:49:07+00:00</dc:date>
+    <link>http://wellformedweb.org/story/1</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>semantic-web rss rdf syndication-formats</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:83437e924f49/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:semantic-web"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rss"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rdf"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:syndication-formats"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://web.resource.org/rss/1.0/modules/">
+    <title>RDF Site Summary 1.0 Modules</title>
+    <dc:date>2012-02-29T21:39:39+00:00</dc:date>
+    <link>http://web.resource.org/rss/1.0/modules/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>xml rdf rss syndication-formats semantic-web</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:e01e1da0c3a2/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:xml"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rdf"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rss"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:syndication-formats"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:semantic-web"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.smallbytes.net/~bobkat/waterstone.html">
+    <title>F/X PORN - Terminator 2</title>
+    <dc:date>2012-02-28T23:12:07+00:00</dc:date>
+    <link>http://www.smallbytes.net/~bobkat/waterstone.html</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>film-studies david-foster-wallace special-effects hollywood</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:54d6022ea945/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:film-studies"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:david-foster-wallace"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:special-effects"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:hollywood"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.princexml.com/">
+    <title>Prince: Home</title>
+    <dc:date>2012-02-28T17:53:06+00:00</dc:date>
+    <link>http://www.princexml.com/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>css html pdf software javascript svg pdf-publishing physical-internet</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:bc8222769cb2/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:css"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:html"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:pdf"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:software"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:javascript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:svg"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:pdf-publishing"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:physical-internet"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://infovore.org/archives/2012/02/26/a-year-of-links/">
+    <title>Infovore » A Year of Links</title>
+    <dc:date>2012-02-28T17:51:57+00:00</dc:date>
+    <link>http://infovore.org/archives/2012/02/26/a-year-of-links/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>pinboard books print-on-demand media-archival digital-archiving physical-internet</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:69778aa11feb/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:pinboard"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:books"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:print-on-demand"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:media-archival"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:digital-archiving"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:physical-internet"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.minecraftwiki.net/wiki/Minecraft_Wiki">
+    <title>Minecraft Wiki - The ultimate resource for all things Minecraft</title>
+    <dc:date>2012-02-28T13:26:41+00:00</dc:date>
+    <link>http://www.minecraftwiki.net/wiki/Minecraft_Wiki</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>minecraft reference wiki computer-games</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:28eebf667368/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:minecraft"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:reference"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:wiki"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:computer-games"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.wordbrooklyn.com/book/9780802129925">
+    <title>[priv] Ragnarok: The End of the Gods | WORD</title>
+    <dc:date>2012-02-28T04:57:43+00:00</dc:date>
+    <link>http://www.wordbrooklyn.com/book/9780802129925</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ac6a2241fee6/</dc:identifier>
+</item>
+<item rdf:about="http://www.amazon.com/Tinker-Tailor-Soldier-Spy-George/dp/0143119788/ref=tmm_pap_title_1?ie=UTF8&amp;qid=1330404820&amp;sr=1-1">
+    <title>[priv] Amazon.com: Tinker, Tailor, Soldier, Spy: A George Smiley Novel (9780143119784): John le Carre: Books</title>
+    <dc:date>2012-02-28T04:57:24+00:00</dc:date>
+    <link>http://www.amazon.com/Tinker-Tailor-Soldier-Spy-George/dp/0143119788/ref=tmm_pap_title_1?ie=UTF8&amp;qid=1330404820&amp;sr=1-1</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ebfb73d0ebc9/</dc:identifier>
+</item>
+<item rdf:about="http://playfic.com/">
+    <title>Playfic</title>
+    <dc:date>2012-02-27T23:14:22+00:00</dc:date>
+    <link>http://playfic.com/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>interactive-fiction writing fiction community</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ab75f1ccfc76/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:interactive-fiction"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:writing"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:fiction"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:community"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.sharpedgebeer.com/">
+    <title>[priv] sharp edge</title>
+    <dc:date>2012-02-27T21:11:12+00:00</dc:date>
+    <link>http://www.sharpedgebeer.com/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:b5dc48f51197/</dc:identifier>
+</item>
+<item rdf:about="http://fallingwater.org/">
+    <title>[priv] Fallingwater | Home</title>
+    <dc:date>2012-02-27T21:10:28+00:00</dc:date>
+    <link>http://fallingwater.org/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ab054df98f3d/</dc:identifier>
+</item>
+<item rdf:about="http://www.lvpgh.com/lawrenceville-restaurants">
+    <title>[priv] Lawrenceville Restaurant Directory | Lawrenceville</title>
+    <dc:date>2012-02-27T21:10:11+00:00</dc:date>
+    <link>http://www.lvpgh.com/lawrenceville-restaurants</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:a10a7a574560/</dc:identifier>
+</item>
+<item rdf:about="http://www.mattress.org/">
+    <title>[priv] The Mattress Factory Art Museum</title>
+    <dc:date>2012-02-27T21:09:32+00:00</dc:date>
+    <link>http://www.mattress.org/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:99abfbef5b67/</dc:identifier>
+</item>
+<item rdf:about="http://www.warhol.org/">
+    <title>[priv] the warhol:</title>
+    <dc:date>2012-02-27T21:09:18+00:00</dc:date>
+    <link>http://www.warhol.org/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:7a6a3477aa4b/</dc:identifier>
+</item>
+<item rdf:about="http://www.pittsburghparks.org/">
+    <title>[priv] Pittsburgh Parks Conservancy</title>
+    <dc:date>2012-02-27T21:09:03+00:00</dc:date>
+    <link>http://www.pittsburghparks.org/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:81b0a77eee38/</dc:identifier>
+</item>
+<item rdf:about="http://www.tour.pitt.edu/tour-080.html">
+    <title>[priv] University of Pittsburgh</title>
+    <dc:date>2012-02-27T21:08:07+00:00</dc:date>
+    <link>http://www.tour.pitt.edu/tour-080.html</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:4fb51fe82be2/</dc:identifier>
+</item>
+<item rdf:about="http://www.square-cafe.com/">
+    <title>[priv] Square Cafe located in Pittsburgh, Pennsylvania</title>
+    <dc:date>2012-02-27T21:07:44+00:00</dc:date>
+    <link>http://www.square-cafe.com/</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:d7ad8fce26c0/</dc:identifier>
+</item>
+<item rdf:about="http://www.airbnb.com/rooms/8468#photos">
+    <title>[priv] Beautiful, Private 2-Story Charmer in Pittsburgh</title>
+    <dc:date>2012-02-27T21:07:28+00:00</dc:date>
+    <link>http://www.airbnb.com/rooms/8468#photos</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:3b6988422840/</dc:identifier>
+</item>
+<item rdf:about="http://www.fastcocreate.com/1679472/martin-scorseses-film-school-the-85-films-you-need-to-see-to-know-anything-about-film">
+    <title>Martin Scorsese's Film School: The 85 Films You Need To See To Know Anything About Film | Co.Create: Creativity Culture Commerce</title>
+    <dc:date>2012-02-27T17:33:49+00:00</dc:date>
+    <link>http://www.fastcocreate.com/1679472/martin-scorseses-film-school-the-85-films-you-need-to-see-to-know-anything-about-film</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>movie-list film-studies martin-scorsese</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:dcca286a30b4/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:movie-list"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:film-studies"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:martin-scorsese"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://lesswrong.com/lw/9wr/my_algorithm_for_beating_procrastination/">
+    <title>My Algorithm for Beating Procrastination - Less Wrong</title>
+    <dc:date>2012-02-27T17:09:35+00:00</dc:date>
+    <link>http://lesswrong.com/lw/9wr/my_algorithm_for_beating_procrastination/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>procrastination psychology self-improvement introspection</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:901d858adb74/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:procrastination"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:psychology"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:self-improvement"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:introspection"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.chris-granger.com/2012/02/26/connecting-to-your-creation/">
+    <title>Connecting to your creation</title>
+    <dc:date>2012-02-27T17:09:11+00:00</dc:date>
+    <link>http://www.chris-granger.com/2012/02/26/connecting-to-your-creation/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>interactive-programming clojure game-programming clojurescript</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:54218664cf46/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:interactive-programming"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:clojure"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:game-programming"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:clojurescript"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.aboutlinux.info/2005/10/10-seconds-guide-to-bash-shell.html">
+    <title>Bash Shell Scripting - 10 Seconds Guide | All about Linux</title>
+    <dc:date>2012-02-27T17:08:50+00:00</dc:date>
+    <link>http://www.aboutlinux.info/2005/10/10-seconds-guide-to-bash-shell.html</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>bash shell-scripting tutorial</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:5cbd7a3b4fd4/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:bash"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:shell-scripting"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:tutorial"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://vimeo.com/36579366">
+    <title>Bret Victor - Inventing on Principle on Vimeo</title>
+    <dc:date>2012-02-27T17:08:43+00:00</dc:date>
+    <link>http://vimeo.com/36579366</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>streaming-video interaction-design ui-design info-viz</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:6e5fa74242ed/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:streaming-video"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:interaction-design"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:ui-design"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:info-viz"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://sites.google.com/site/asenselessconversation/">
+    <title>A SENSELESS CONVERSATION - Zach BarnettA SENSELESS CONVERSATION - Zach Barnett</title>
+    <dc:date>2012-02-27T14:09:53+00:00</dc:date>
+    <link>https://sites.google.com/site/asenselessconversation/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>philosophy fiction science-fiction turing-test machine-learning</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:2e65504a936f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:philosophy"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:fiction"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:science-fiction"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:turing-test"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:machine-learning"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://tylerc.com/the-120-minutes-archive/1992/">
+    <title>The 120 Minutes Archive | 1992</title>
+    <dc:date>2012-02-24T20:36:15+00:00</dc:date>
+    <link>http://tylerc.com/the-120-minutes-archive/1992/</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[sweet source for some 90s playlists]]></description>
+<dc:subject>music music-list 90s playlists mtv via:theletterc</dc:subject>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:a870f098d20d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:music"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:music-list"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:90s"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:playlists"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:mtv"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:via:theletterc"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.cookinglight.com/cooking-101/techniques/cooking-questions-tips-00400000064986/print-index.html">
+    <title>Cooking Tips and Cooking Questions Answered - Cooking Light</title>
+    <dc:date>2012-02-24T17:18:03+00:00</dc:date>
+    <link>http://www.cookinglight.com/cooking-101/techniques/cooking-questions-tips-00400000064986/print-index.html</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>cooking baking howto self-improvement</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:94e27093dc70/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:cooking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:baking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:howto"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:self-improvement"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://practicalthought.com/sl/">
+    <title>sl</title>
+    <dc:date>2012-02-23T21:26:50+00:00</dc:date>
+    <link>http://practicalthought.com/sl/</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[sl takes the most common use of Unix ls, to display the files in a directory compactly in multiple columns, and makes it substantially more useful.
+
+]]></description>
+<dc:subject>unix linux shell-scripting bash command-line</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:39c22271f0e9/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:unix"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:linux"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:shell-scripting"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:bash"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:command-line"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://drdobbs.com/184401197">
+    <title>[toread] How Non-Member Functions Improve Encapsulation | Dr Dobb's</title>
+    <dc:date>2012-02-23T21:26:15+00:00</dc:date>
+    <link>http://drdobbs.com/184401197</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>c++ oop encapsulation</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:cbffae1a6783/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:c++"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:oop"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:encapsulation"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.gnuplotting.org/">
+    <title>Gnuplotting · Create scientific plots using Gnuplot</title>
+    <dc:date>2012-02-23T21:24:17+00:00</dc:date>
+    <link>http://www.gnuplotting.org/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>gnuplot charting visualization info-viz</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:723c7809656e/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:gnuplot"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:charting"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:visualization"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:info-viz"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://pinboard.in/directory">
+    <title>Pinboard: User Directory</title>
+    <dc:date>2012-02-23T20:20:55+00:00</dc:date>
+    <link>https://pinboard.in/directory</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[Pinbros]]></description>
+<dc:subject>pinboard people destination interesting-database</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:c4a78d74e0e8/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:pinboard"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:people"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:destination"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:interesting-database"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.metafilter.com/112106/The-7-Biggest-Economic-Lies">
+    <title>The 7 Biggest Economic Lies | MetaFilter</title>
+    <dc:date>2012-02-23T20:19:21+00:00</dc:date>
+    <link>http://www.metafilter.com/112106/The-7-Biggest-Economic-Lies</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>streaming-video economics robert-reich</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:fc3ed9f9a526/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:streaming-video"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:economics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:robert-reich"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://notes.pinboard.in/u:dhartunian/941722a563023e1d0b62">
+    <title>[priv] Learning Programming Project Ideas</title>
+    <dc:date>2012-02-23T00:50:19+00:00</dc:date>
+    <link>http://notes.pinboard.in/u:dhartunian/941722a563023e1d0b62</link>
+    <dc:creator>dhartunian</dc:creator><dc:source>http://notes.pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:b064214f337f/</dc:identifier>
+</item>
+<item rdf:about="http://gogameguru.com/zhou-hexi-challenge-chen-yaoye-26th-tianyuan/">
+    <title>Zhou Hexi to challenge Chen Yaoye in the 26th Tianyuan</title>
+    <dc:date>2012-02-23T00:43:16+00:00</dc:date>
+    <link>http://gogameguru.com/zhou-hexi-challenge-chen-yaoye-26th-tianyuan/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>go-game blog game-commentary</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:affc0fe98e23/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:go-game"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:blog"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:game-commentary"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://vimeo.com/user10165343/review/35759983/820bd84fa4">
+    <title>[priv] Ben Silbermann Keynote Address at Alt Summit</title>
+    <dc:date>2012-02-23T00:42:48+00:00</dc:date>
+    <link>http://vimeo.com/user10165343/review/35759983/820bd84fa4</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>startups</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:0ddd2d284c37/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:startups"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.masteringemacs.org/articles/2010/12/13/complete-guide-mastering-eshell/">
+    <title>A Complete Guide to Mastering Eshell | Mastering Emacs</title>
+    <dc:date>2012-02-22T23:47:15+00:00</dc:date>
+    <link>http://www.masteringemacs.org/articles/2010/12/13/complete-guide-mastering-eshell/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>emacs eshell lisp shell-scripting</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ca606941a9c6/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:emacs"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:eshell"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:lisp"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:shell-scripting"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.clojure.net/2012/02/22/DSL-Examples/">
+    <title>Dsl Examples ←</title>
+    <dc:date>2012-02-22T21:17:18+00:00</dc:date>
+    <link>http://www.clojure.net/2012/02/22/DSL-Examples/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>clojure DSLs functional-programming</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:b56600dc72c7/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:clojure"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:DSLs"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:functional-programming"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.addedbytes.com/blog/if-php-were-british/">
+    <title>If PHP Were British - Added Bytes - Brighton Web Application Development</title>
+    <dc:date>2012-02-22T15:33:27+00:00</dc:date>
+    <link>http://www.addedbytes.com/blog/if-php-were-british/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>programming php humor</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:b4a9b74e3e60/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:programming"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:php"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:humor"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.youtube.com/watch?feature=player_embedded&amp;v=MNdT5FSgEP0">
+    <title>[priv] A rational view of tradition - YouTube</title>
+    <dc:date>2012-02-21T23:34:24+00:00</dc:date>
+    <link>http://www.youtube.com/watch?feature=player_embedded&amp;v=MNdT5FSgEP0</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>rationality</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:abca734fe946/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rationality"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.youtube.com/watch?feature=player_embedded&amp;v=fLG0kkgnRkc">
+    <title>[priv] How to want to change your mind - YouTube</title>
+    <dc:date>2012-02-21T23:32:38+00:00</dc:date>
+    <link>http://www.youtube.com/watch?feature=player_embedded&amp;v=fLG0kkgnRkc</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>rationality</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:417766572e07/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:rationality"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://coevolving.com/blogs/index.php/archive/digital-photos-capturing-archiving-printing-web-sharing-photoblogging/">
+    <title>Coevolving Innovations | Digital photos: capturing, archiving, printing, web sharing, photoblogging</title>
+    <dc:date>2012-02-21T21:33:11+00:00</dc:date>
+    <link>http://coevolving.com/blogs/index.php/archive/digital-photos-capturing-archiving-printing-web-sharing-photoblogging/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>digital-photography howto tutorial media-organization media-archival</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:ae29599ff9df/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:digital-photography"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:howto"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:tutorial"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:media-organization"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:media-archival"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://qdig.sourceforge.net/Main/HomePage">
+    <title>Qdig : Quick Digital Image Gallery</title>
+    <dc:date>2012-02-21T21:30:26+00:00</dc:date>
+    <link>http://qdig.sourceforge.net/Main/HomePage</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>image-gallery php media-cms digital-photography</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:1645eace30bf/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:image-gallery"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:php"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:media-cms"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:digital-photography"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.zenphoto.org/">
+    <title>Zenphoto - The simpler media website CMS</title>
+    <dc:date>2012-02-21T21:30:05+00:00</dc:date>
+    <link>http://www.zenphoto.org/</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[self-hosted photo albums]]></description>
+<dc:subject>cms media-cms php digital-photography</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:778aeae24a14/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:cms"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:media-cms"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:php"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:digital-photography"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://code.google.com/p/google-breakpad/">
+    <title>google-breakpad - Crash reporting - Google Project Hosting</title>
+    <dc:date>2012-02-21T20:02:20+00:00</dc:date>
+    <link>http://code.google.com/p/google-breakpad/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>google open-source crash-reporting mozilla</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:93252144b910/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:google"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:open-source"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:crash-reporting"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:mozilla"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://mindprod.com/jgloss/jgloss.html">
+    <title>Canadian Mind Products Java &amp; Internet Glossary</title>
+    <dc:date>2012-02-21T19:55:39+00:00</dc:date>
+    <link>http://mindprod.com/jgloss/jgloss.html</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[must-see if only for the 90s-era web design]]></description>
+<dc:subject>java programming reference</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:f49eacfee9f8/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:java"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:programming"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:reference"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://arstechnica.com/tech-policy/news/2010/11/what-google-knows-about-you-and-how-to-tweak-it.ars">
+    <title>What Google knows about you and how to tweak it</title>
+    <dc:date>2012-02-21T19:50:44+00:00</dc:date>
+    <link>http://arstechnica.com/tech-policy/news/2010/11/what-google-knows-about-you-and-how-to-tweak-it.ars</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>google privacy</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:242160d2b4f4/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:google"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:privacy"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://soundcloud.com/kompakt/sets/michael-mayer-total-12-megaset/">
+    <title>Michael Mayer - Total 12 Megaset by Kompakt on SoundCloud - Create, record and share your sounds for free</title>
+    <dc:date>2012-02-21T19:49:36+00:00</dc:date>
+    <link>http://soundcloud.com/kompakt/sets/michael-mayer-total-12-megaset/</link>
+    <dc:creator>dhartunian</dc:creator><description><![CDATA[one of the best things ever.]]></description>
+<dc:subject>music minimal-techno kompakt-records michael-mayer dance-music</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:5883ce067c95/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:music"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:minimal-techno"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:kompakt-records"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:michael-mayer"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:dance-music"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://samsaffron.com/archive/2012/02/17/stop-paying-your-jquery-tax">
+    <title>Stop paying your jQuery tax</title>
+    <dc:date>2012-02-21T19:49:14+00:00</dc:date>
+    <link>http://samsaffron.com/archive/2012/02/17/stop-paying-your-jquery-tax</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>javascript jquery</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:011899112866/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:javascript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:jquery"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://spin.atomicobject.com/2012/02/14/how-to-write-good-requirments/">
+    <title>How to write good requirments | Atomic Spin</title>
+    <dc:date>2012-02-21T19:49:06+00:00</dc:date>
+    <link>http://spin.atomicobject.com/2012/02/14/how-to-write-good-requirments/</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>technical-writing specs</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:c325079a04df/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:technical-writing"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:specs"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.datastax.com/dev">
+    <title>Developer Center | DataStax</title>
+    <dc:date>2012-02-21T19:48:12+00:00</dc:date>
+    <link>http://www.datastax.com/dev</link>
+    <dc:creator>dhartunian</dc:creator><dc:subject>cassandra nosql tutorial</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dhartunian/b:4ad7be9392ae/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:cassandra"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:nosql"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dhartunian/t:tutorial"/>
+</rdf:Bag></taxo:topics>
+</item>
+</rdf:RDF>
