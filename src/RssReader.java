@@ -1,46 +1,45 @@
-import javax.swing.*;
-import java.awt.*;
-import java.net.*;
 import java.util.List;
+import org.eclipse.swt.*;
+import org.eclipse.swt.layout.*;
+import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.browser.*;
 
-public class RssReader extends JFrame {
-	
-	protected JEditorPane postPane;
-	
-	public RssReader(RssItem post) {
-		super("Rss Reader");
-		createGUI(post);
-	}
-	
-	protected void createGUI(RssItem post) {
-		Container content = getContentPane();
-		content.setLayout(new BorderLayout());
-		
-		postPane = new JEditorPane();
-		postPane.setEditable(false);
-		postPane.setContentType("text/html");
-		content.add(new JScrollPane(postPane), BorderLayout.CENTER);
-		
-		openURL(post);
-		
-		setSize(500, 600);
-		setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-	}
-
-	protected void openURL(RssItem post) {
-		try {
-			postPane.setText(post.body);	
-		} catch (Exception e) {
-			System.out.println("Couldn't Open:" + post.title);
-		}
-	}
+public class RssReader {
 	
 	public static void main(String[] args) {
 		RssParser myrss = new RssParser();
 		myrss.readRss("rss.xml");
 		List<RssItem> posts = myrss.doc.getPosts();
 		RssItem a_post = posts.get(4);
-		new RssReader(a_post).setVisible(true);
+
+		Display display = new Display();
+		Shell shell = new Shell(display);
+		shell.setLayout(new GridLayout(2,false));
+//		
+//		final Composite c = new Composite(shell, SWT.NONE);
+//		
+//		GridLayout layout = new GridLayout();
+//		layout.numColumns = 2;
+//		c.setLayout(layout);
+		
+		Browser browser;
+		
+		try {
+			browser = new Browser(shell, SWT.NONE);
+			browser.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		} catch (SWTError e) {
+			System.out.println(e.getMessage());
+			display.dispose();
+			return;
+		}
+		
+		browser.setText(a_post.body);
+		shell.open();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch())
+				display.sleep();
+		}
+		display.dispose();
 	}
 }
 

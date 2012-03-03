@@ -28,7 +28,7 @@ public class RssDocument {
 	public RssItem createPost(Element entry) {
 		String title = getTextInside(entry, "title");
 		String date = getTextInside(entry, "pubDate");
-		String content = getTextInside(entry, "description");
+		String content = getTextInside(entry, "content:encoded");
 		String link = getTextInside(entry, "link");
 		RssItem post = new RssItem(title, content, link, date);
 		return post;
