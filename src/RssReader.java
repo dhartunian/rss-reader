@@ -18,13 +18,11 @@ public class RssReader {
 		shell.setText("RSS Reader v0.1");
 		
 		Browser browser;		
+		final PostList post_list;
 
-		final org.eclipse.swt.widgets.List feed_list = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
+		final FeedList feedlist = new FeedList(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL, feeds, postlist);
 		feed_list.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true, 1, 3));
-		feed_list.add("Topical");
-		feed_list.add("3quarksdaily");
-		feed_list.add("Brain Pickings");
-		feed_list.add("Futility Closet");
+		feed_list.add(new RssFeed("Topical", "http://www.topicaltopical.com/feed");
 		feed_list.add("Infovore");
 
 		final Label title = new Label(shell, SWT.LEFT);
@@ -44,7 +42,7 @@ public class RssReader {
 			return;
 		}
 
-		final PostList post_list = new PostList(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL, browser, posts);
+		post_list = new PostList(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL, browser, posts);
 		post_list.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true));
 		for (int i = 0;i < posts.size(); i++){
 			post_list.add(posts.get(i).title);			
