@@ -6,6 +6,7 @@ import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.browser.*;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Rectangle;
 
 public class RssReader {
 	
@@ -29,7 +30,7 @@ public class RssReader {
 				postlist.removeAll();
 				for (int i = 0;i < posts.size(); i++){
 					postlist.add(posts.get(i).title);			
-				}			
+				}
 				browser.setText(posts.get(0).body);
 			}
 		}
@@ -70,27 +71,48 @@ public class RssReader {
 		feeddata.put(arsfeed.title, arsposts);
 		
 		Display display = new Display();
-		Shell shell = new Shell(display);
-		shell.setLayout(new GridLayout(2,false));
+		final Shell shell = new Shell(display);
+		shell.setLayout(new FormLayout());
 		shell.setText("RSS Reader v0.1");
 		
 		feedlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
-		feedlist.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true, 1, 3));
+		final FormData feedlist_data = new FormData();
+		feedlist_data.left = new FormAttachment(0,0);
+		feedlist_data.top = new FormAttachment(0,0);
+		feedlist_data.width = shell.getClientArea().width / 4;
+		feedlist_data.height = shell.getClientArea().height / 3;
+		feedlist.setLayoutData(feedlist_data);
 		feedlist.add("Topical");
 		feedlist.add("Ars Technica");
 		feedlist.addSelectionListener(new FeedListSelection());
 
-		final Label title = new Label(shell, SWT.LEFT);
-		title.setText(a_post.title);
-		title.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-
-		final Label author = new Label(shell, SWT.LEFT);
-		author.setText(a_post.link);
-		author.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		shell.addListener(SWT.Resize, new Listener() {
+			public void handleEvent (Event e) {
+				Rectangle area = shell.getClientArea();
+				feedlist_data.width = area.width / 4;
+				feedlist_data.height = area.height / 3;
+				shell.layout();
+			}
+		});
+		
+		
+//		final Label title = new Label(shell, SWT.LEFT);
+//		title.setText(a_post.title);
+////		title.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+//
+//		final Label author = new Label(shell, SWT.LEFT);
+//		author.setText(a_post.link);
+////		author.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 
 		try {
 			browser = new Browser(shell, SWT.NONE);
-			browser.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+			FormData browser_data = new FormData();
+			browser_data.left = new FormAttachment(feedlist);
+			browser_data.top = new FormAttachment(0,0);
+			browser_data.right = new FormAttachment(100,0);
+			browser_data.bottom = new FormAttachment(100,0);
+			browser.setLayoutData(browser_data);
+			
 		} catch (SWTError e) {
 			System.out.println(e.getMessage());
 			display.dispose();
@@ -98,7 +120,12 @@ public class RssReader {
 		}
 
 		postlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
-		postlist.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true));
+		FormData postlist_data = new FormData();
+		postlist_data.left = new FormAttachment(0,0);
+		postlist_data.top = new FormAttachment(feedlist);
+		postlist_data.right = new FormAttachment(browser);
+		postlist_data.bottom = new FormAttachment(100,0);
+		postlist.setLayoutData(postlist_data);
 		postlist.addSelectionListener(new PostListSelection());
 		for (int i = 0;i < posts.size(); i++){
 			postlist.add(posts.get(i).title);			
@@ -108,6 +135,7 @@ public class RssReader {
 		feedlist.setSelection(0);
 		postlist.setSelection(0);
 		
+//		shell.pack();
 		shell.open();
 
 		while (!shell.isDisposed()) {
