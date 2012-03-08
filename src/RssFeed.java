@@ -8,5 +8,5 @@ public class RssFeed {
 		this.url = url;
 		this.title = title;
 	}
-	
+
 }

@@ -28,7 +28,13 @@ public class RssDocument {
 	public RssItem createPost(Element entry) {
 		String title = getTextInside(entry, "title");
 		String date = getTextInside(entry, "pubDate");
-		String content = getTextInside(entry, "content:encoded");
+		String content = "";
+		if (getTextInside(entry, "description") != null) {
+			content = getTextInside(entry, "description");
+		}
+		if (getTextInside(entry, "content:encoded") != null) { 
+			content = getTextInside(entry, "content:encoded");
+		}
 		String link = getTextInside(entry, "link");
 		RssItem post = new RssItem(title, content, link, date);
 		return post;
@@ -80,7 +86,6 @@ public class RssDocument {
 	public boolean supportsDC() {
 		return supportsAttr("xmlns:dc");
 	}
-
 	
 	private boolean supportsAttr(String attribute){
 		Element root = dom.getDocumentElement();

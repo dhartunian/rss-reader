@@ -1,29 +1,84 @@
 import java.util.List;
+import java.util.HashMap;
 import org.eclipse.swt.*;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.browser.*;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 
 public class RssReader {
 	
-	public static void main(String[] args) {
-		RssParser myrss = new RssParser();
-		myrss.readRss("rss.xml");
-		List<RssItem> posts = myrss.doc.getPosts();
-		RssItem a_post = posts.get(4);
+	static Browser browser;
+	static org.eclipse.swt.widgets.List postlist;
+	static org.eclipse.swt.widgets.List feedlist;
+	
+	static HashMap<String, List<RssItem>> feeddata;
+	static List<RssFeed> feeds;
+	static RssParser rssparser;
+	
+	private static class FeedListSelection implements SelectionListener {
+		public void widgetDefaultSelected(SelectionEvent arg0) {
+			return;
+		}
+		
+		public void widgetSelected(SelectionEvent arg0) {
+			if (feedlist.getSelectionIndex() >= 0) {
+				String feedname = feedlist.getItem(feedlist.getSelectionIndex());
+				List<RssItem> posts = feeddata.get(feedname);
+				postlist.removeAll();
+				for (int i = 0;i < posts.size(); i++){
+					postlist.add(posts.get(i).title);			
+				}			
+				browser.setText(posts.get(0).body);
+			}
+		}
+	}	
+	
+	private static class PostListSelection implements SelectionListener {
+		public void widgetDefaultSelected(SelectionEvent arg0) {
+			return;
+		}
 
+		public void widgetSelected(SelectionEvent arg0) {
+			if (feedlist.getSelectionIndex() >= 0) {
+				String feedname = feedlist.getItem(feedlist.getSelectionIndex());
+				RssItem post = feeddata.get(feedname).get(postlist.getSelectionIndex());
+				browser.setText(post.body);
+			}
+		}
+		
+	}	
+
+	public static List<RssItem> getFeedPosts(RssFeed feed) {
+		rssparser = new RssParser();
+		rssparser.readRss(feed.url);
+		List<RssItem> posts = rssparser.doc.getPosts();
+		return posts;
+	}
+	
+	public static void main(String[] args) {
+		RssFeed rssfeed = new RssFeed("rss.xml", "Topical");
+		List<RssItem> posts = getFeedPosts(rssfeed);
+		RssItem a_post = posts.get(0);
+
+		RssFeed arsfeed = new RssFeed("ars.xml", "Ars Technica");
+		List<RssItem> arsposts = getFeedPosts(arsfeed);
+
+		feeddata = new HashMap<String, List<RssItem>>();
+		feeddata.put(rssfeed.title, posts);
+		feeddata.put(arsfeed.title, arsposts);
+		
 		Display display = new Display();
 		Shell shell = new Shell(display);
 		shell.setLayout(new GridLayout(2,false));
 		shell.setText("RSS Reader v0.1");
 		
-		Browser browser;		
-		final PostList post_list;
-
-		final FeedList feedlist = new FeedList(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL, feeds, postlist);
-		feed_list.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true, 1, 3));
-		feed_list.add(new RssFeed("Topical", "http://www.topicaltopical.com/feed");
-		feed_list.add("Infovore");
+		feedlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
+		feedlist.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true, 1, 3));
+		feedlist.add("Topical");
+		feedlist.add("Ars Technica");
+		feedlist.addSelectionListener(new FeedListSelection());
 
 		final Label title = new Label(shell, SWT.LEFT);
 		title.setText(a_post.title);
@@ -42,18 +97,24 @@ public class RssReader {
 			return;
 		}
 
-		post_list = new PostList(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL, browser, posts);
-		post_list.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true));
+		postlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
+		postlist.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, true));
+		postlist.addSelectionListener(new PostListSelection());
 		for (int i = 0;i < posts.size(); i++){
-			post_list.add(posts.get(i).title);			
+			postlist.add(posts.get(i).title);			
 		}
 
 		browser.setText(a_post.body);
+		feedlist.setSelection(0);
+		postlist.setSelection(0);
+		
 		shell.open();
+
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())
 				display.sleep();
 		}
+		
 		display.dispose();
 	}
 }
