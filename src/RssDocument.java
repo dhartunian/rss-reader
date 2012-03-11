@@ -36,7 +36,13 @@ public class RssDocument {
 			content = getTextInside(entry, "content:encoded");
 		}
 		String link = getTextInside(entry, "link");
-		RssItem post = new RssItem(title, content, link, date);
+		String author = null;
+		if (this.supportsDC()) {
+			author = getTextInside(entry, "dc:creator");
+		} else {
+			author = getTextInside(entry, "author");
+		}
+		RssItem post = new RssItem(title, author, content, link, date);
 		return post;
 	}
 

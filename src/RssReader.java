@@ -13,6 +13,9 @@ public class RssReader {
 	static Browser browser;
 	static org.eclipse.swt.widgets.List postlist;
 	static org.eclipse.swt.widgets.List feedlist;
+	static Label posttitle;
+	static Label postauthor;
+	static Link posturl;
 	
 	static HashMap<String, List<RssItem>> feeddata;
 	static List<RssFeed> feeds;
@@ -31,7 +34,7 @@ public class RssReader {
 				for (int i = 0;i < posts.size(); i++){
 					postlist.add(posts.get(i).title);			
 				}
-				browser.setText(posts.get(0).body);
+				updatePostArea(posts.get(0));
 			}
 		}
 	}	
@@ -45,12 +48,30 @@ public class RssReader {
 			if (feedlist.getSelectionIndex() >= 0) {
 				String feedname = feedlist.getItem(feedlist.getSelectionIndex());
 				RssItem post = feeddata.get(feedname).get(postlist.getSelectionIndex());
-				browser.setText(post.body);
+				updatePostArea(post);
 			}
 		}
 		
-	}	
+	}
+	
+	
+	private static class addFeed implements SelectionListener {
+		public void widgetDefaultSelected(SelectionEvent arg0) {
+			return;
+		}
 
+		public void widgetSelected(SelectionEvent arg0) {
+			
+		}
+	}
+
+	private static void updatePostArea(RssItem post) {
+		posttitle.setText(post.title);
+		postauthor.setText(post.author);
+		posturl.setText(post.link);
+		browser.setText(post.body);
+	}
+	
 	public static List<RssItem> getFeedPosts(RssFeed feed) {
 		rssparser = new RssParser();
 		rssparser.readRss(feed.url);
@@ -72,13 +93,26 @@ public class RssReader {
 		
 		Display display = new Display();
 		final Shell shell = new Shell(display);
-		shell.setLayout(new FormLayout());
+		FormLayout shelllayout = new FormLayout();
+		shelllayout.marginWidth = 4;
+		shelllayout.marginHeight = 4;
+		shell.setLayout(shelllayout);
 		shell.setText("RSS Reader v0.1");
+		
+		Button addfeed = new Button(shell, SWT.PUSH | SWT.TOP);
+		//addfeed.addSelectionListener(new addFeedListener());
+		final FormData addfeed_data = new FormData();
+		addfeed_data.left = new FormAttachment(0,0);
+		addfeed_data.top = new FormAttachment(0,0);
+		addfeed_data.width = shell.getClientArea().width / 4;
+		addfeed_data.height = 40;
+		addfeed.setLayoutData(addfeed_data);
+		addfeed.setText("+ Feed");
 		
 		feedlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
 		final FormData feedlist_data = new FormData();
 		feedlist_data.left = new FormAttachment(0,0);
-		feedlist_data.top = new FormAttachment(0,0);
+		feedlist_data.top = new FormAttachment(addfeed,4);
 		feedlist_data.width = shell.getClientArea().width / 4;
 		feedlist_data.height = shell.getClientArea().height / 3;
 		feedlist.setLayoutData(feedlist_data);
@@ -91,24 +125,40 @@ public class RssReader {
 				Rectangle area = shell.getClientArea();
 				feedlist_data.width = area.width / 4;
 				feedlist_data.height = area.height / 3;
+				addfeed_data.width = shell.getClientArea().width / 4;				
 				shell.layout();
 			}
 		});
 		
-		
-//		final Label title = new Label(shell, SWT.LEFT);
-//		title.setText(a_post.title);
-////		title.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-//
-//		final Label author = new Label(shell, SWT.LEFT);
-//		author.setText(a_post.link);
-////		author.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		posttitle = new Label(shell, SWT.LEFT);
+		posttitle.setText(a_post.title);
+		final FormData posttitle_data = new FormData();
+		posttitle_data.left = new FormAttachment(feedlist,4);
+		posttitle_data.top = new FormAttachment(0,0);
+		posttitle_data.right = new FormAttachment(100,0);
+		posttitle.setLayoutData(posttitle_data);
 
+		postauthor = new Label(shell, SWT.LEFT);
+		postauthor.setText(a_post.author);
+		final FormData postauthor_data = new FormData();
+		postauthor_data.left = new FormAttachment(feedlist,4);
+		postauthor_data.top = new FormAttachment(posttitle,4);
+		postauthor_data.right = new FormAttachment(100,0);
+		postauthor.setLayoutData(postauthor_data);
+
+		posturl = new Link(shell, SWT.LEFT);
+		posturl.setText(a_post.link);
+		final FormData posturl_data = new FormData();
+		posturl_data.left = new FormAttachment(feedlist,4);
+		posturl_data.top = new FormAttachment(postauthor,4);
+		posturl_data.right = new FormAttachment(100,0);
+		posturl.setLayoutData(posturl_data);
+		
 		try {
 			browser = new Browser(shell, SWT.NONE);
 			FormData browser_data = new FormData();
-			browser_data.left = new FormAttachment(feedlist);
-			browser_data.top = new FormAttachment(0,0);
+			browser_data.left = new FormAttachment(feedlist, 4);
+			browser_data.top = new FormAttachment(posturl,4);
 			browser_data.right = new FormAttachment(100,0);
 			browser_data.bottom = new FormAttachment(100,0);
 			browser.setLayoutData(browser_data);
@@ -122,8 +172,8 @@ public class RssReader {
 		postlist = new org.eclipse.swt.widgets.List(shell, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL);
 		FormData postlist_data = new FormData();
 		postlist_data.left = new FormAttachment(0,0);
-		postlist_data.top = new FormAttachment(feedlist);
-		postlist_data.right = new FormAttachment(browser);
+		postlist_data.top = new FormAttachment(feedlist, 4);
+		postlist_data.right = new FormAttachment(browser, -4);
 		postlist_data.bottom = new FormAttachment(100,0);
 		postlist.setLayoutData(postlist_data);
 		postlist.addSelectionListener(new PostListSelection());
