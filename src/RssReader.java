@@ -6,6 +6,8 @@ import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.browser.*;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Rectangle;
 
 public class RssReader {
@@ -80,12 +82,13 @@ public class RssReader {
 	}
 	
 	public static void main(String[] args) {
-		RssFeed rssfeed = new RssFeed("rss.xml", "Topical");
+		RssFeed rssfeed = new RssFeed("http://topicaltopical.com/feed", "Topical");
 		List<RssItem> posts = getFeedPosts(rssfeed);
-		RssItem a_post = posts.get(0);
+//		RssItem a_post = posts.get(0);
 
-		RssFeed arsfeed = new RssFeed("ars.xml", "Ars Technica");
+		RssFeed arsfeed = new RssFeed("http://feeds.arstechnica.com/arstechnica/index?format=xml", "Ars Technica");
 		List<RssItem> arsposts = getFeedPosts(arsfeed);
+		RssItem a_post = arsposts.get(0);
 
 		feeddata = new HashMap<String, List<RssItem>>();
 		feeddata.put(rssfeed.title, posts);
@@ -120,6 +123,7 @@ public class RssReader {
 		feedlist.add("Ars Technica");
 		feedlist.addSelectionListener(new FeedListSelection());
 
+
 		shell.addListener(SWT.Resize, new Listener() {
 			public void handleEvent (Event e) {
 				Rectangle area = shell.getClientArea();
@@ -137,6 +141,7 @@ public class RssReader {
 		posttitle_data.top = new FormAttachment(0,0);
 		posttitle_data.right = new FormAttachment(100,0);
 		posttitle.setLayoutData(posttitle_data);
+		posttitle.setFont(new Font(display, new FontData("",16,SWT.BOLD)));
 
 		postauthor = new Label(shell, SWT.LEFT);
 		postauthor.setText(a_post.author);
@@ -177,14 +182,14 @@ public class RssReader {
 		postlist_data.bottom = new FormAttachment(100,0);
 		postlist.setLayoutData(postlist_data);
 		postlist.addSelectionListener(new PostListSelection());
-		for (int i = 0;i < posts.size(); i++){
-			postlist.add(posts.get(i).title);			
+		for (int i = 0;i < arsposts.size(); i++){
+			postlist.add(arsposts.get(i).title);			
 		}
 
 		browser.setText(a_post.body);
 		feedlist.setSelection(0);
 		postlist.setSelection(0);
-		
+
 //		shell.pack();
 		shell.open();
 

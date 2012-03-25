@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.io.IOUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
@@ -32,7 +33,8 @@ public class RssParser {
 		
 		try {
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document dom = db.parse(filename);
+			String rss_data = Download.getCleanFeedData(filename);
+			Document dom = db.parse(IOUtils.toInputStream(rss_data));
 			doc = new RssDocument(dom);
 		} catch (IOException e) {
 			e.printStackTrace();
