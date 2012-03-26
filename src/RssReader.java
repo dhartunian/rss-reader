@@ -18,10 +18,13 @@ public class RssReader {
 	static Label posttitle;
 	static Label postauthor;
 	static Link posturl;
+	static Text newfeed;
 	
 	static HashMap<String, List<RssItem>> feeddata;
-	static List<RssFeed> feeds;
 	static RssParser rssparser;
+
+	static Display display;
+	static Shell shell;
 	
 	private static class FeedListSelection implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
@@ -34,9 +37,10 @@ public class RssReader {
 				List<RssItem> posts = feeddata.get(feedname);
 				postlist.removeAll();
 				for (int i = 0;i < posts.size(); i++){
-					postlist.add(posts.get(i).title);			
+					postlist.add(posts.get(i).getTitle());			
 				}
 				updatePostArea(posts.get(0));
+				postlist.select(0);
 			}
 		}
 	}	
@@ -57,56 +61,45 @@ public class RssReader {
 	}
 	
 	
-	private static class addFeed implements SelectionListener {
+	private static class addFeedClick implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
 			return;
 		}
 
 		public void widgetSelected(SelectionEvent arg0) {
-			
+			downloadAndAddFeed(newfeed.getText());
 		}
 	}
 
 	private static void updatePostArea(RssItem post) {
-		posttitle.setText(post.title);
-		postauthor.setText(post.author);
-		posturl.setText(post.link);
-		browser.setText(post.body);
+		posttitle.setText(post.getTitle());
+		postauthor.setText(post.getAuthor());
+		posturl.setText(post.getLink());
+		browser.setText(post.getBody());
 	}
 	
-	public static List<RssItem> getFeedPosts(RssFeed feed) {
+	public static void downloadAndAddFeed(String url) {
 		rssparser = new RssParser();
-		rssparser.readRss(feed.url);
+		rssparser.readRss(url);
 		List<RssItem> posts = rssparser.doc.getPosts();
-		return posts;
+		feeddata.put(rssparser.doc.title, posts);
+		feedlist.add(rssparser.doc.title);
 	}
 	
-	public static void main(String[] args) {
-		RssFeed rssfeed = new RssFeed("http://topicaltopical.com/feed", "Topical");
-		List<RssItem> posts = getFeedPosts(rssfeed);
-//		RssItem a_post = posts.get(0);
-
-		RssFeed arsfeed = new RssFeed("http://feeds.arstechnica.com/arstechnica/index?format=xml", "Ars Technica");
-		List<RssItem> arsposts = getFeedPosts(arsfeed);
-		RssItem a_post = arsposts.get(0);
-
-		feeddata = new HashMap<String, List<RssItem>>();
-		feeddata.put(rssfeed.title, posts);
-		feeddata.put(arsfeed.title, arsposts);
-		
-		Display display = new Display();
-		final Shell shell = new Shell(display);
-		FormLayout shelllayout = new FormLayout();
-		shelllayout.marginWidth = 4;
-		shelllayout.marginHeight = 4;
-		shell.setLayout(shelllayout);
-		shell.setText("RSS Reader v0.1");
+	public static void createInterface() {
+		newfeed = new Text(shell, SWT.SINGLE);
+		final FormData newfeed_data = new FormData();
+		newfeed_data.left = new FormAttachment(0,0);
+		newfeed_data.top = new FormAttachment(0,0);
+//		newfeed_data.right = new FormAttachment(posttitle,0);
+		newfeed_data.width = shell.getClientArea().width / 4;
+		newfeed.setLayoutData(newfeed_data);
 		
 		Button addfeed = new Button(shell, SWT.PUSH | SWT.TOP);
-		//addfeed.addSelectionListener(new addFeedListener());
+		addfeed.addSelectionListener(new addFeedClick());
 		final FormData addfeed_data = new FormData();
 		addfeed_data.left = new FormAttachment(0,0);
-		addfeed_data.top = new FormAttachment(0,0);
+		addfeed_data.top = new FormAttachment(newfeed,4);
 		addfeed_data.width = shell.getClientArea().width / 4;
 		addfeed_data.height = 40;
 		addfeed.setLayoutData(addfeed_data);
@@ -119,10 +112,7 @@ public class RssReader {
 		feedlist_data.width = shell.getClientArea().width / 4;
 		feedlist_data.height = shell.getClientArea().height / 3;
 		feedlist.setLayoutData(feedlist_data);
-		feedlist.add("Topical");
-		feedlist.add("Ars Technica");
 		feedlist.addSelectionListener(new FeedListSelection());
-
 
 		shell.addListener(SWT.Resize, new Listener() {
 			public void handleEvent (Event e) {
@@ -135,7 +125,6 @@ public class RssReader {
 		});
 		
 		posttitle = new Label(shell, SWT.LEFT);
-		posttitle.setText(a_post.title);
 		final FormData posttitle_data = new FormData();
 		posttitle_data.left = new FormAttachment(feedlist,4);
 		posttitle_data.top = new FormAttachment(0,0);
@@ -144,7 +133,6 @@ public class RssReader {
 		posttitle.setFont(new Font(display, new FontData("",16,SWT.BOLD)));
 
 		postauthor = new Label(shell, SWT.LEFT);
-		postauthor.setText(a_post.author);
 		final FormData postauthor_data = new FormData();
 		postauthor_data.left = new FormAttachment(feedlist,4);
 		postauthor_data.top = new FormAttachment(posttitle,4);
@@ -152,7 +140,6 @@ public class RssReader {
 		postauthor.setLayoutData(postauthor_data);
 
 		posturl = new Link(shell, SWT.LEFT);
-		posturl.setText(a_post.link);
 		final FormData posturl_data = new FormData();
 		posturl_data.left = new FormAttachment(feedlist,4);
 		posturl_data.top = new FormAttachment(postauthor,4);
@@ -182,15 +169,25 @@ public class RssReader {
 		postlist_data.bottom = new FormAttachment(100,0);
 		postlist.setLayoutData(postlist_data);
 		postlist.addSelectionListener(new PostListSelection());
-		for (int i = 0;i < arsposts.size(); i++){
-			postlist.add(arsposts.get(i).title);			
-		}
+		
+	}
+	
+	public static void main(String[] args) {
+		feeddata = new HashMap<String, List<RssItem>>();
+		
+		display = new Display();
+		shell = new Shell(display);
+		FormLayout shelllayout = new FormLayout();
+		shelllayout.marginWidth = 4;
+		shelllayout.marginHeight = 4;
+		shell.setLayout(shelllayout);
+		shell.setText("RSS Reader v0.1");
+		
+		createInterface();
 
-		browser.setText(a_post.body);
-		feedlist.setSelection(0);
-		postlist.setSelection(0);
-
-//		shell.pack();
+		downloadAndAddFeed("http://topicaltopical.com/feed");
+		downloadAndAddFeed("http://feeds.arstechnica.com/arstechnica/index?format=xml");
+		
 		shell.open();
 
 		while (!shell.isDisposed()) {
@@ -199,6 +196,7 @@ public class RssReader {
 		}
 		
 		display.dispose();
+		
 	}
 }
 

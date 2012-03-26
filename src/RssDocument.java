@@ -8,6 +8,7 @@ public class RssDocument {
 
 	private Document dom;
 	private List<RssItem> posts;
+	public String title;
 
 	public RssDocument(Document dom) {
 		this.dom = dom;
@@ -17,6 +18,8 @@ public class RssDocument {
 	
 	public void parseRss() {
 		Element root = dom.getDocumentElement();
+		NodeList titlenode = root.getElementsByTagName("title");
+		title = titlenode.item(0).getTextContent();
 		NodeList entries = root.getElementsByTagName("item");
 		for (int i = 0; i < entries.getLength(); i++) {
 			Element entry = (Element)entries.item(i);
@@ -60,7 +63,7 @@ public class RssDocument {
 		System.out.println("-----------------------");
 		for (RssItem p : posts) {
 			System.out.println(p.toString());
-			System.out.println(p.body);
+			System.out.println(p.getBody());
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
