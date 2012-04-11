@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 import org.eclipse.swt.*;
@@ -185,8 +186,13 @@ public class RssReader {
 		
 		createInterface();
 
-		downloadAndAddFeed("http://topicaltopical.com/feed");
-		downloadAndAddFeed("http://feeds.arstechnica.com/arstechnica/index?format=xml");
+		ArrayList<RssFeed> feedlist = RssFeed.getFeedsFromDb();
+		for (RssFeed feed : feedlist) {
+			downloadAndAddFeed(feed.url);
+		}
+		
+//		downloadAndAddFeed("http://topicaltopical.com/feed");
+//		downloadAndAddFeed("http://feeds.arstechnica.com/arstechnica/index?format=xml");
 		
 		shell.open();
 

@@ -20,7 +20,7 @@ public class Download {
 				IOUtils.closeQuietly(in);
 			}
 		} catch (MalformedURLException e) {
-			e.printStackTrace();
+			return "";
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

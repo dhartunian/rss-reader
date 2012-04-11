@@ -34,8 +34,10 @@ public class RssParser {
 		try {
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			String rss_data = Download.getCleanFeedData(filename);
-			Document dom = db.parse(IOUtils.toInputStream(rss_data));
-			doc = new RssDocument(dom);
+			if (!rss_data.isEmpty()) {
+				Document dom = db.parse(IOUtils.toInputStream(rss_data));
+				doc = new RssDocument(dom);
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (SAXException e) {
