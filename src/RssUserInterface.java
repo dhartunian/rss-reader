@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import org.eclipse.swt.*;
 import org.eclipse.swt.layout.*;
@@ -23,31 +25,52 @@ public class RssUserInterface implements Runnable{
 	private Display display;
 	private Shell shell;
 	
+	HashMap<String, List<RssItem>> feeddata;
+	
 	public RssUserInterface() {
-		
+		feeddata = new HashMap<String, List<RssItem>>();		
 	}
 	
-	private static class FeedListSelection implements SelectionListener {
+	private class FeedListSelection implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
 			return;
 		}
 		
 		public void widgetSelected(SelectionEvent arg0) {
-			//TODO: add code to feed list selection
+			if (feedlist.getSelectionIndex() >= 0) {
+				String feedname = feedlist.getItem(feedlist.getSelectionIndex());
+				List<RssItem> posts = feeddata.get(feedname);
+				postlist.removeAll();
+				for (int i = 0;i < posts.size(); i++){
+					postlist.add(posts.get(i).getTitle());			
+				}
+				updatePostArea(posts.get(0));
+				postlist.select(0);
+			}
 		}
 	}
 	
-	private static class PostListSelection implements SelectionListener {
+	private class PostListSelection implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
 			return;
 		}
 
 		public void widgetSelected(SelectionEvent arg0) {
-			//TODO: add code to post list selection
+			if (feedlist.getSelectionIndex() >= 0) {
+				String feedname = feedlist.getItem(feedlist.getSelectionIndex());
+				RssItem post = feeddata.get(feedname).get(postlist.getSelectionIndex());
+				updatePostArea(post);
+			}		
 		}
-		
 	}
-	
+
+	public void downloadAndAddFeed(String url) {
+		RssParser rssparser = new RssParser();
+		rssparser.readRss(url);
+		List<RssItem> posts = rssparser.doc.getPosts();
+		feeddata.put(rssparser.doc.title, posts);
+		addFeed(new RssFeed(url, rssparser.doc.title));
+	}
 	
 	private static class addFeedClick implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
@@ -173,6 +196,13 @@ public class RssUserInterface implements Runnable{
 		shell.setText("RSS Reader v0.1");
 		createInterface();
 		shell.open();
+		
+
+
+		ArrayList<RssFeed> feedlist = RssFeed.getAllFeeds();
+		for (RssFeed feed : feedlist) {
+			downloadAndAddFeed(feed.getUrl());
+		}		
 		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())
