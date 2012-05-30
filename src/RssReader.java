@@ -1,4 +1,3 @@
-
 public class RssReader {
 
 	static RssUserInterface ui;
@@ -8,5 +7,5 @@ public class RssReader {
 		Thread ui_thread = new Thread(ui);
 		ui_thread.start();
 	}
+	
 }
-

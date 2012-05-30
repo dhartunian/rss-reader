@@ -196,10 +196,10 @@ public class RssUserInterface implements Runnable{
 		shell.setText("RSS Reader v0.1");
 		createInterface();
 		shell.open();
+
+		RssDBMongo db = new RssDBMongo();
 		
-
-
-		ArrayList<RssFeed> feedlist = RssFeed.getAllFeeds();
+		ArrayList<RssFeed> feedlist = db.getAllFeeds();
 		for (RssFeed feed : feedlist) {
 			downloadAndAddFeed(feed.getUrl());
 		}		
