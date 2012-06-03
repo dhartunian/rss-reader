@@ -27,8 +27,8 @@ public class RssUserInterface implements Runnable{
 	
 	HashMap<String, List<RssItem>> feeddata;
 	
-	public RssUserInterface() {
-		feeddata = new HashMap<String, List<RssItem>>();		
+ 	public RssUserInterface(HashMap<String, List<RssItem>> feeddata) {
+		this.feeddata = feeddata;
 	}
 	
 	private class FeedListSelection implements SelectionListener {
@@ -64,13 +64,7 @@ public class RssUserInterface implements Runnable{
 		}
 	}
 
-	public void downloadAndAddFeed(String url) {
-		RssParser rssparser = new RssParser();
-		rssparser.readRss(url);
-		List<RssItem> posts = rssparser.doc.getPosts();
-		feeddata.put(rssparser.doc.title, posts);
-		addFeed(new RssFeed(url, rssparser.doc.title));
-	}
+
 	
 	private static class addFeedClick implements SelectionListener {
 		public void widgetDefaultSelected(SelectionEvent arg0) {
@@ -193,16 +187,15 @@ public class RssUserInterface implements Runnable{
 		shelllayout.marginWidth = 4;
 		shelllayout.marginHeight = 4;
 		shell.setLayout(shelllayout);
-		shell.setText("RSS Reader v0.1");
+		shell.setText("RSS Reader v0.1");		
 		createInterface();
+		
+		for (RssFeed feed: feeddata.keySet()) {
+			addFeed(feed);
+		}		
+		
 		shell.open();
 
-		RssDBMongo db = new RssDBMongo();
-		
-		ArrayList<RssFeed> feedlist = db.getAllFeeds();
-		for (RssFeed feed : feedlist) {
-			downloadAndAddFeed(feed.getUrl());
-		}		
 		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())

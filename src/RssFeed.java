@@ -19,5 +19,13 @@ public class RssFeed {
 	public String getUrl() {
 		return this.url;
 	}
+	
+	public int hashCode() {
+		return this.url.hashCode();
+	}
+	
+	public Boolean equals(RssFeed other) {
+		return (this.getUrl() == other.getUrl()); 
+	}
 
 }
